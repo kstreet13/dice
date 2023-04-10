@@ -12,6 +12,8 @@
 #' roll()
 #' roll(times = 2, sides = 20)
 #'
+#' @importFrom stats runif
+#'
 #' @export
 roll <- function(times = 1, sides = 6, verbose = TRUE){
     suppressWarnings({ times <- as.integer(times) })
