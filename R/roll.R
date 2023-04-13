@@ -1,6 +1,19 @@
 
-# a function for rolling dice!
 
+#' @title a function for rolling dice!
+#' @name roll
+#'
+#' @param times integer, number of times to roll
+#' @param sides integer, number of sides
+#' @param verbose logical, whether to show what was rolled
+#'
+#' @return a random number
+#' @export
+#'
+#' @importFrom stats runif
+#'
+#' @examples
+#' roll()
 roll <- function(times = 1, sides = 6, verbose = TRUE){
     suppressWarnings({ times <- as.integer(times) })
     if(is.na(times) || times < 1) stop('"times" argument must be a positive integer.')
@@ -17,4 +30,6 @@ roll <- function(times = 1, sides = 6, verbose = TRUE){
     }
     return(invisible(r))
 }
+
+
 
